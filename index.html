@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sathish Animation</title>
+</head>
+<style>
+    .sathish {
+        box-shadow: 0px 2px 7px #101010;
+        /* transition-duration: 1000ms;
+        transition-timing-function: ease-out; */
+        /* transition: 2s 500ms ease background, 1s ease-in height, 1s ease-in width; */
+        border-radius: 10%;
+        transition: 3s ease all;
+        width: 200px;
+        height: 200px;
+        background: cadetblue;
+        background: linear-gradient(cadetblue, orange);
+
+        animation: vasi 4s forwards;
+        animation-iteration-count: infinite;
+        /* position: absolute;
+        left: 0px; */
+    }
+
+    @keyframes vasi {
+        0% {
+            transform: translate(-200px,20px);
+            border-radius: 30%;
+        }
+
+        /* 25%{
+            transform: translate(600px,200px);
+            border-radius: 20%;
+            background: linear-gradient(orange, cadetblue);
+        }
+
+        50%{
+            transform: translate(900px,300px);
+            border-radius: 40%;
+            background: linear-gradient(cadetblue, orange);
+        }
+
+        75%{
+            transform: translate(1200px,400px);
+            border-radius: 45%;
+            background: linear-gradient(orange, cadetblue);
+        } */
+
+        100% {
+            transform: translate(1750px,400px);
+            background: linear-gradient(orange,cadetblue);
+            /* background: orange; */
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            
+        }
+    }
+
+    .sathish-place{
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .sky{
+        height: 40vh;
+        background: skyblue;
+        position: relative;
+        width: 100%;
+    }
+
+    .sky img.cloud{
+        height: 200px;
+        width: 200px;
+        object-fit: contain;
+        position: absolute;  
+        animation: drive 25s linear forwards;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-timing-function: linear;
+    }
+
+    .sky img:nth-child(2){
+        opacity: 0.5;
+        top: 50px;
+        left: 0px;
+        animation: drive 30s linear forwards;
+        animation-iteration-count: infinite;
+        /* animation-direction: reverse; */
+        animation-timing-function: linear;
+    }
+
+    .sky .sun{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        animation: sun-rotate 10s linear forwards infinite;
+        float: right;
+        margin-top: 50px;
+        margin-right: 70px;
+    }
+
+    @keyframes sun-rotate{
+        from{
+            transform: rotate(0deg)
+        }
+        to{
+            transform: rotate(360deg)
+        }
+    }
+
+    .grass{
+        height: 20vh;
+        background: green;
+    }
+
+    .road{
+        position: relative;
+        height: 40vh;
+        background: #3c3b3b;
+    }
+
+    .road-border{
+        height: 20px;
+        background: #8e8e8e;
+    }
+
+    .road-line{
+        border-top: 10px dashed;
+        border-color: #e2e2e2;
+        transform: translateY(150px);
+    }
+
+    .road img{
+        object-fit: cover;
+        height: 200px;
+        width: 200px;
+        transform: translateY(-90px);
+        /* transition: 2s ease; */
+
+        animation: drive 7s forwards;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes drive{
+        from{
+            transform: translateX(-200px);
+        }
+        to{
+            transform: translateX(1700px);
+        }
+    }
+
+    body{
+        margin: 0 !important;
+    }
+</style>
+
+<body>
+    <div class="sathish-place">
+        <div class="sky">
+            <img class="sun" src="https://ya-webdesign.com/images/sun-clipart-summer-1.png"/>
+            <img class="cloud" src="https://cdn.pixabay.com/photo/2014/03/25/15/24/cloud-296722_1280.png"/>
+            <img class="cloud" src="https://cdn.pixabay.com/photo/2014/03/25/15/24/cloud-296722_1280.png"/>
+        </div>
+        <div class="grass"></div>
+        <div class="road">
+            <div class="road-border"></div>
+            <div class="road-line"></div>
+            <img src="https://requestreduce.org/images/mickey-mouse-football-clipart-16.png"/>
+        </div>
+    <!-- <div class="sathish"></div> -->
+    </div>
+</body>
+
+</html>
